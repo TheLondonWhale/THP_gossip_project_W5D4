@@ -1,0 +1,12 @@
+
+<h1>Connexion</h1>
+
+<p><%= link_to "Retour à l'accueil", root_path %> </p>
+
+<%= form_tag "/registration/new", method: :post do %>
+  <label for="email">ton email</label>
+  <input type="text" name="email"  /> <br />
+  <label for="password">ton mot de passe</label>
+  <input type="password" name="password" />
+  <input type="submit" value="Se connecter" />
+<% end %>

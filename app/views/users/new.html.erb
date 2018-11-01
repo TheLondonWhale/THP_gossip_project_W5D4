@@ -1,0 +1,15 @@
+<h1>Crée ton profil</h1>
+
+<%= form_for @user do |f| %>
+<%= f.label :first_name, "Ton prénom"%>
+<%= f.text_field :first_name%>
+<%= f.label :last_name, "Ton nom de famille"%>
+<%= f.text_field :last_name %>
+<%= f.label :age, "Ton age"%>
+<%= f.number_field :age %>
+<%= f.label :email, "Ton email"%>
+<%= f.email_field :email %>
+<%= f.label :password, "ton mot de passe"%>
+<%= f.password_field :password %>
+<%= f.submit "Crée ton profil" %>
+<% end %>

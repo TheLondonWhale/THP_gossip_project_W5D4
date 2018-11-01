@@ -1,3 +1,11 @@
+
+<% if @current_user %>
+  <h1>Bienvenue <%= @current_user.first_name %> !</h1>
+<% else %>
+  <h1>Bienvenue visiteur anonyme !</h1>
+  <a href="/registration/new">S'identifier</a>
+<% end %>
+
 <table>
   <tbody>
     <thead>

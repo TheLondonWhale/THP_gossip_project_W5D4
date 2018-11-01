@@ -1,0 +1,18 @@
+<h1>&Eacute;diter ton profil n°<%= @user.id %></h1>
+
+<%= form_for @user do |f| %>
+<label>ton profil : </label>
+<%= f.label :first_name, "Ton prénom" %>
+<%= f.text_field :first_name %>
+<%= f.label :last_name, "Nom de famille" %>
+<%= f.text_field :last_name %>
+<%= f.label :age, "ton age" %>
+<%= f.number_field :age %>
+<%= f.label :email, "ton email" %>
+<%= f.email_field :email %>
+<%= f.label :password, "ton mot de passe" %>
+<%= f.text_field :password %>
+<%= f.submit "Enregistrer les modifications" %>
+<% end %>
+
+<%= link_to 'Clique pour détruire ton profil', @user, method: :delete %>
