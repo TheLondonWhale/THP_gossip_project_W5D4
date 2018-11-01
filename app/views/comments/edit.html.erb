@@ -1,0 +1,15 @@
+<h1>&Eacute;diter le commentaire n°<%= @comment.id %></h1>
+
+<%= form_for ([@gossip, @comment]) do |f| %>
+<p>
+<%= f.label :content, "Le contenu" %>
+<%= f.text_area :content %>
+</p>
+<p>
+<%= f.label :anonymous_commentor, "Ton petit nom" %>
+<%= f.text_field :anonymous_commentor %>
+</p>
+<%= f.submit "Modifier le commentaire" %>
+<% end %>
+
+<%= link_to 'Clique pour détruire', [@comment.gossip, @comment], method: :delete %>
