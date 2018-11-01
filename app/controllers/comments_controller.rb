@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
     @gossip = Gossip.find(params[:id])
     @comment = @gossip.comments.find(params[:id])
     @comment.destroy
-    redirect_to gossip_path(@gossip)
+    redirect_to gossip_path(@gossip.id)
   end
 
   private
